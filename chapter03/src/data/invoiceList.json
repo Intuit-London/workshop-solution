@@ -1,0 +1,11 @@
+{
+  "invoices" : [
+    {"number": "1", "customer": {"businessName": "Manish"}, "creationDate": "20/06/2016", "totalAmount": "£345", "paid": true},
+    {"number": "2", "customer": {"businessName": "Manish"}, "creationDate": "10/12/2016", "totalAmount": "£35", "paid": true},
+    {"number": "3", "customer": {"businessName": "Manish"}, "creationDate": "23/05/2016", "totalAmount": "£34", "paid": false},
+    {"number": "4", "customer": {"businessName": "Manish"}, "creationDate": "10/06/2016", "totalAmount": "£90", "paid": false},
+    {"number": "5", "customer": {"businessName": "Manish"}, "creationDate": "09/08/2016", "totalAmount": "£12", "paid": true},
+    {"number": "6", "customer": {"businessName": "Manish"}, "creationDate": "01/06/2016", "totalAmount": "£34", "paid": true},
+    {"number": "7", "customer": {"businessName": "Manish"}, "creationDate": "24/11/2015", "totalAmount": "£98", "paid": false}
+  ]
+}

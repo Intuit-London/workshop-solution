@@ -1,0 +1,11 @@
+body {
+  padding: 0px 30px 30px 30px;
+}
+
+body.summaryLabel {
+  padding-top: 10px !important;
+}
+
+.paddingBottom10 {
+  padding-bottom: 10px;
+}

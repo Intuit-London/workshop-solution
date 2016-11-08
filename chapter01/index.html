@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 01</title>
+  </head>
+  <body>
+    <h1>Chapter 01 - StopWatch using React</h1>
+    <div id="container">
+
+    </div>
+    <h4>Example Details</h4>
+    <p>This is written in vanilla JavaScript (without JSX) and transformed in the browser.</p>
+    <p>The apis used are</p>
+    <ul>
+      <li><a href="https://facebook.github.io/react/docs/top-level-api.html#react.createclass" target="_blank">Define React Component</a></li>
+      <li><a href="https://facebook.github.io/react/docs/top-level-api.html#react.createfactory" target="_blank">Initialize React Component</a></li>
+      <li><a href="https://facebook.github.io/react/docs/top-level-api.html#reactdom.render" target="_blank">Render React Component</a></li>
+
+    <script src="../libs/react.js"></script>
+    <script src="../libs/react-dom.js"></script>
+    <script>
+      // https://facebook.github.io/react/docs/top-level-api.html#react.createclass
+      var ExampleApplication = React.createClass({
+        render: function() {
+          var elapsed = Math.round(this.props.elapsed  / 100);
+          var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
+          var message =
+            'React has been successfully running for ' + seconds + ' seconds.';
+
+          return React.DOM.p(null, message);
+        }
+      });
+
+      // https://facebook.github.io/react/docs/top-level-api.html#react.createfactory
+      var ExampleApplicationFactory = React.createFactory(ExampleApplication);
+
+      var start = new Date().getTime();
+
+      setInterval(function() {
+        // https://facebook.github.io/react/docs/top-level-api.html#reactdom.render
+        ReactDOM.render(
+          ExampleApplicationFactory({elapsed: new Date().getTime() - start}),
+          document.getElementById('container')
+        );
+      }, 100);
+    </script>
+  </body>
+</html>
