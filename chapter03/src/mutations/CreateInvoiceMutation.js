@@ -7,21 +7,11 @@ export default class CreateInvoiceMutation extends Relay.Mutation {
     }
 
     getVariables() {
-        return {
-          invoice : {
-            number : "35",
-            creationDate : "25-06-2016",
-            paid : false,
-            customer : {
-              id: "12341",
-              businessName: "asfa"
-            },
-            user : {
-              id: "L1VzZXI6dXNlci0x"
-            },
-            totalAmount: 234.34
-          }
+        let data = {
+          invoice: this.props
         };
+        data.invoice.user = {"id" : "L1VzZXI6dXNlci0x"};
+        return data;
     }
 
     getFatQuery() {
@@ -50,7 +40,7 @@ export default class CreateInvoiceMutation extends Relay.Mutation {
                 }
               `]
             }
-            //Need to fix the below query for updating client side cache 
+            //Need to fix the below query for updating client side cache
             /*,{
               type: "RANGE_ADD",
               parentName: "invoice",
