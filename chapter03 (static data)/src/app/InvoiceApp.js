@@ -32,8 +32,8 @@ class InvoiceApp extends Component {
       return (
         <div>
             <AppHeader createInvoice = {this.setCreateInvoice.bind(this)} listInvoice = {this.setListInvoice.bind(this)}/>
-            <InvoiceSummary user={this.props.user}/>
-            {this.state.isCreateInvoice ? <InvoiceCreate/> : <InvoiceList invoices={this.props.user.invoices}/> }
+            <InvoiceSummary/>
+            {this.state.isCreateInvoice ? <InvoiceCreate/> : <InvoiceList invoices={this.props.invoices}/> }
         </div>
       );
   };
